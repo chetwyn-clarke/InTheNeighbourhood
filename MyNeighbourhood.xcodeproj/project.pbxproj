@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73C2EEAD1E81C38800561CF5 /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C2EEAC1E81C38800561CF5 /* AddPostVC.swift */; };
 		73F48CAB1E81A1300062A4DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F48CAA1E81A1300062A4DC /* AppDelegate.swift */; };
 		73F48CAD1E81A1300062A4DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F48CAC1E81A1300062A4DC /* ViewController.swift */; };
 		73F48CB01E81A1300062A4DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73F48CAE1E81A1300062A4DC /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73C2EEAC1E81C38800561CF5 /* AddPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
 		73F48CA71E81A1300062A4DC /* MyNeighbourhood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNeighbourhood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F48CAA1E81A1300062A4DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73F48CAC1E81A1300062A4DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		73F48CBF1E81AB820062A4DC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				73C2EEAC1E81C38800561CF5 /* AddPostVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			files = (
 				73F48CBE1E81A2300062A4DC /* Post.swift in Sources */,
 				73F48CAD1E81A1300062A4DC /* ViewController.swift in Sources */,
+				73C2EEAD1E81C38800561CF5 /* AddPostVC.swift in Sources */,
 				73F48CAB1E81A1300062A4DC /* AppDelegate.swift in Sources */,
 				73F48CC21E81AFC50062A4DC /* PostCell.swift in Sources */,
 			);
@@ -332,6 +336,7 @@
 				73F48CBB1E81A1300062A4DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
