@@ -15,12 +15,24 @@ class Post {
     private var _imagePath: String!
     //Note that this is the path to an image that is saved on the device.
     private var _title: String!
-    private var _postDec: String!
+    private var _postDesc: String!
+    
+    var imagePath: String {
+        return _imagePath
+    }
+    
+    var title: String {
+        return _title
+    }
+    
+    var postDescription: String {
+        return _postDesc
+    }
     
     init(imagePath: String, title: String, postDescription: String) {
         self._imagePath = imagePath
         self._title = title
-        self._postDec = postDescription
+        self._postDesc = postDescription
     }
     
 }
