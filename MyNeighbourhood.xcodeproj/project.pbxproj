@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		73C2EEAD1E81C38800561CF5 /* AddPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C2EEAC1E81C38800561CF5 /* AddPostVC.swift */; };
+		73C2EEB01E81E45900561CF5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C2EEAF1E81E45900561CF5 /* DataService.swift */; };
 		73F48CAB1E81A1300062A4DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F48CAA1E81A1300062A4DC /* AppDelegate.swift */; };
 		73F48CAD1E81A1300062A4DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F48CAC1E81A1300062A4DC /* ViewController.swift */; };
 		73F48CB01E81A1300062A4DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73F48CAE1E81A1300062A4DC /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		73C2EEAC1E81C38800561CF5 /* AddPostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostVC.swift; sourceTree = "<group>"; };
+		73C2EEAF1E81E45900561CF5 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		73F48CA71E81A1300062A4DC /* MyNeighbourhood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNeighbourhood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F48CAA1E81A1300062A4DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73F48CAC1E81A1300062A4DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73C2EEAE1E81E44600561CF5 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				73C2EEAF1E81E45900561CF5 /* DataService.swift */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
 		73F48C9E1E81A12F0062A4DC = {
 			isa = PBXGroup;
 			children = (
@@ -60,11 +70,11 @@
 		73F48CA91E81A1300062A4DC /* MyNeighbourhood */ = {
 			isa = PBXGroup;
 			children = (
+				73C2EEAE1E81E44600561CF5 /* New Group */,
 				73F48CBC1E81A20A0062A4DC /* Model */,
 				73F48CC01E81AF710062A4DC /* View */,
 				73F48CBF1E81AB820062A4DC /* Controller */,
 				73F48CAA1E81A1300062A4DC /* AppDelegate.swift */,
-				73F48CAC1E81A1300062A4DC /* ViewController.swift */,
 				73F48CAE1E81A1300062A4DC /* Main.storyboard */,
 				73F48CB11E81A1300062A4DC /* Assets.xcassets */,
 				73F48CB31E81A1300062A4DC /* LaunchScreen.storyboard */,
@@ -84,6 +94,7 @@
 		73F48CBF1E81AB820062A4DC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				73F48CAC1E81A1300062A4DC /* ViewController.swift */,
 				73C2EEAC1E81C38800561CF5 /* AddPostVC.swift */,
 			);
 			name = Controller;
@@ -173,6 +184,7 @@
 				73F48CBE1E81A2300062A4DC /* Post.swift in Sources */,
 				73F48CAD1E81A1300062A4DC /* ViewController.swift in Sources */,
 				73C2EEAD1E81C38800561CF5 /* AddPostVC.swift in Sources */,
+				73C2EEB01E81E45900561CF5 /* DataService.swift in Sources */,
 				73F48CAB1E81A1300062A4DC /* AppDelegate.swift in Sources */,
 				73F48CC21E81AFC50062A4DC /* PostCell.swift in Sources */,
 			);

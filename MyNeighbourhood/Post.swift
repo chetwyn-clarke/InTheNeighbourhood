@@ -10,7 +10,7 @@ import Foundation
 
 //This will hold all the information displayed in each post.
 
-class Post {
+class Post: NSObject, NSCoding {
     
     private var _imagePath: String!
     //Note that this is the path to an image that is saved on the device.
@@ -33,6 +33,23 @@ class Post {
         self._imagePath = imagePath
         self._title = title
         self._postDesc = postDescription
+    }
+    
+    override init() {
+        
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(self._imagePath, forKey: "imagePath")
+        aCoder.encode(self._postDesc, forKey: "description")
+        aCoder.encode(self._title, forKey: "title")
+    }
+    
+    required convenience init?(coder aDecoder: NSCoder) {
+        self.init()
+        self._imagePath = aDecoder.decodeObject(forKey: "imagePath") as? String
+        self._title = aDecoder.decodeObject(forKey: "title") as? String
+        self._postDesc = aDecoder.decodeObject(forKey: "description") as? String
     }
     
 }

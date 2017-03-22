@@ -12,11 +12,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tableView: UITableView!
     
-    var posts = [Post]()
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let post = posts[indexPath.row]
+        let post = DataService.instance.loadedPosts[indexPath.row]
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
             cell.configureCell(post)
@@ -29,7 +27,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return posts.count
+        return DataService.instance.loadedPosts.count
         
     }
 
@@ -38,17 +36,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.delegate = self
         tableView.dataSource = self
         
-        //Test Data
-        let post1 = Post(imagePath: "", title: "Post 1", postDescription: "Post 1 Description.")
-        let post2 = Post(imagePath: "", title: "Post 2", postDescription: "I am the second post.")
-        let post3 = Post(imagePath: "", title: "Post 3", postDescription: "I am the third post.")
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.onPostsLoaded(_:)), name: NSNotification.Name(rawValue: "postsLoaded"), object: nil)
         
-        posts.append(post1)
-        posts.append(post2)
-        posts.append(post3)
-        
+    }
+    
+    func onPostsLoaded(_ notif: AnyObject) {
         tableView.reloadData()
-        
     }
 
 }
