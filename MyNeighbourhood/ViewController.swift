@@ -30,6 +30,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return DataService.instance.loadedPosts.count
         
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let currentPost = DataService.instance.loadedPosts[indexPath.row]
+        performSegue(withIdentifier: "toDetailVC", sender: currentPost)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +48,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func onPostsLoaded(_ notif: AnyObject) {
         tableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailVC {
+            if let post = sender as? Post {
+                destination.selectedPost = post
+            }
+        }
     }
 
 }
